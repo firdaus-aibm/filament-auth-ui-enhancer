@@ -17,7 +17,7 @@ composer require diogogpinto/filament-auth-ui-enhancer
 
 ## Usage
 
-To start using the plugin, you need to add the plugin to your plugins array in your filament panel configuration file.
+To start using the plugin, you need to add the plugin to your plugins array in your filament panel.
 
 ```php
 use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
@@ -31,7 +31,7 @@ The form panel width has default value of `50%`. You can change it by adding the
 
 ```php
 AuthUIEnhancerPlugin::make()
-    ->formPanelWidth('50%')
+    ->formPanelWidth('60%')
 ```
 
 ### Empty Panel
@@ -40,7 +40,7 @@ You can set the empty panel background color by adding the following method to y
 
 ```php
 AuthUIEnhancerPlugin::make()
-    ->emptyPanelBackgroundColor('bg-primary-500')
+    ->emptyPanelBackgroundColor('bg-primary-900')
 ```
 
 You can also set a custom image to be displayed on the left side of the login form. The image should be a URL to the image you want to display. By default, the image is `null`.
