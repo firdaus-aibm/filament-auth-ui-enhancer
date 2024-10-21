@@ -23,9 +23,9 @@
             'flex flex-col flex-grow' => $showEmptyPanelOnMobile === true
             ])
         >
-            @if($emptyPanelBackgroundImage)
+            @if($emptyPanelBackgroundImageUrl)
                 <div class="absolute inset-0 h-full w-full bg-cover bg-center"
-                     style="background-image: url('{{ $emptyPanelBackgroundImage }}'); opacity: {{ $emptyPanelBackgroundImageOpacity }}; background-position: center;">
+                     style="background-image: url('{{ $emptyPanelBackgroundImageUrl }}'); opacity: {{ $emptyPanelBackgroundImageOpacity }}; background-position: center;">
                 </div>
             @endif
         </div>
