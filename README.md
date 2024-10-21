@@ -1,13 +1,11 @@
-# This is my package filament-auth-ui-enhancer
+# Filament Auth UI Enhancer
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/diogogpinto/filament-auth-ui-enhancer.svg?style=flat-square)](https://packagist.org/packages/diogogpinto/filament-auth-ui-enhancer)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/diogogpinto/filament-auth-ui-enhancer/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/diogogpinto/filament-auth-ui-enhancer/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/diogogpinto/filament-auth-ui-enhancer/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/diogogpinto/filament-auth-ui-enhancer/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/diogogpinto/filament-auth-ui-enhancer.svg?style=flat-square)](https://packagist.org/packages/diogogpinto/filament-auth-ui-enhancer)
 
-
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This FilamentPHP plugin allows you to customize your login page with a split layout. It lets you display an image on the left side and the login form on the right, giving your page a modern and sleek design.
 
 ## Installation
 
@@ -17,43 +15,64 @@ You can install the package via composer:
 composer require diogogpinto/filament-auth-ui-enhancer
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filament-auth-ui-enhancer-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filament-auth-ui-enhancer-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="filament-auth-ui-enhancer-views"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 
+To start using the plugin, you need to add the plugin to your plugins array in your filament panel.
+
 ```php
-$authUIEnhancer = new DiogoGPinto\AuthUIEnhancer();
-echo $authUIEnhancer->echoPhrase('Hello, DiogoGPinto!');
+use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
+
+ ->plugins([
+    AuthUIEnhancerPlugin::make(),
+])
 ```
 
-## Testing
+The form panel width has default value of `50%`. You can change it by adding the following method and passing the desired width.
 
-```bash
-composer test
+```php
+->formPanelWidth('60%')
+```
+
+### Empty Panel
+
+You can set the empty panel background color by using the following method.
+
+```php
+->emptyPanelBackgroundColor('bg-primary-900')
+```
+
+You can also set an image to be displayed on the left side of the login form.
+
+```php
+->emptyPanelBackgroundImage('images/login.png')
+```
+
+If you would like to chance the image opacity.
+
+```php
+->emptyPanelBackgroundImageOpacity('50%')
+```
+
+You can change the login form background color by using the following method.
+
+### Login Panel
+
+```php
+->loginPanelBackgroundColor('bg-success-500')
+```
+
+You can also change the position of the form.
+
+```php
+->formPosition('left')
+````
+
+### Mobile Form Panel
+
+By default, the form panel will be displayed on the top of the page on mobile devices.
+
+```php
+->mobileFormPosition('bottom')
 ```
 
 ## Changelog
