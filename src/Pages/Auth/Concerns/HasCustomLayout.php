@@ -6,6 +6,6 @@ trait HasCustomLayout
 {
     public function getLayout(): string
     {
-        return 'filament-auth-ui-enhancer::split';
+        return 'filament-auth-ui-enhancer::custom-auth-layout';
     }
 }
