@@ -27,7 +27,7 @@ use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
 ])
 ```
 
-The form panel width has default value of `50%`. You can change it by adding the following method to your filament panel configuration file.
+The form panel width has default value of `50%`. You can change it by adding the following method and passing the desired width.
 
 ```php
 AuthUIEnhancerPlugin::make()
@@ -36,28 +36,28 @@ AuthUIEnhancerPlugin::make()
 
 ### Empty Panel
 
-You can set the empty panel background color by adding the following method to your filament panel configuration file. By default, the background color is `bg-primary-500`.
+You can set the empty panel background color by using the following method.
 
 ```php
 AuthUIEnhancerPlugin::make()
     ->emptyPanelBackgroundColor('bg-primary-900')
 ```
 
-You can also set a custom image to be displayed on the left side of the login form. The image should be a URL to the image you want to display. By default, the image is `null`.
+You can also set an image to be displayed on the left side of the login form.
 
 ```php
 AuthUIEnhancerPlugin::make()
     ->emptyPanelBackgroundImage('images/login.png')
 ```
 
-If you would like to chance the image opacity, you can do so by adding the following method to your filament panel configuration file. By default, the image opacity is `100%`.
+If you would like to chance the image opacity.
 
 ```php
 AuthUIEnhancerPlugin::make()
     ->emptyPanelBackgroundImageOpacity('50%')
 ```
 
-You can change the login form background color by adding the following method to your filament panel configuration file. By default, the background color is `bg-white`.
+You can change the login form background color by using the following method.
 
 ### Login Panel
 
