@@ -8,7 +8,7 @@
 <x-filament-panels::layout.base :livewire="$livewire">
     <div
         @class([
-          'flex w-full min-h-screen',
+          'custom-auth-wrapper flex w-full min-h-screen',
           'lg:flex-row-reverse' => $formPosition === 'left',
           'lg:flex-row' => $formPosition === 'right',
           'flex-col' => $mobileFormPosition === 'bottom' && $showEmptyPanelOnMobile,
@@ -17,7 +17,7 @@
     >
         <!-- Empty Container -->
         <div @class([
-            'relative justify-center px-4',
+            'custom-auth-empty-panel relative justify-center px-4',
             'bg-[var(--empty-panel-background-color)]',
             'hidden lg:flex lg:flex-col lg:flex-grow' => $showEmptyPanelOnMobile === false,
             'flex flex-col flex-grow' => $showEmptyPanelOnMobile === true
@@ -31,8 +31,8 @@
         </div>
 
         <!-- Form Container -->
-        <div class="flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-36 w-full lg:w-[var(--form-panel-width)] bg-[var(--form-panel-background-color)]">
-            <div class="mx-auto w-full max-w-sm">
+        <div class="custom-auth-form-panel flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-36 w-full lg:w-[var(--form-panel-width)] bg-[var(--form-panel-background-color)]">
+            <div class="custom-auth-form-wrapper mx-auto w-full max-w-sm">
                 {{ $slot }}
             </div>
         </div>
