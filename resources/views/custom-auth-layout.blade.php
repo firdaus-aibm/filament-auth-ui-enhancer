@@ -1,6 +1,6 @@
 @php
-    $formPosition = filament('filament-auth-ui-enhancer')->getFormPosition();
-    $mobileFormPosition = filament('filament-auth-ui-enhancer')->getMobileFormPosition();
+    $formPanelPosition = filament('filament-auth-ui-enhancer')->getFormPanelPosition();
+    $mobileFormPanelPosition = filament('filament-auth-ui-enhancer')->getMobileFormPanelPosition();
     $emptyPanelBackgroundImage = filament('filament-auth-ui-enhancer')->getEmptyPanelBackgroundImage();
     $emptyPanelBackgroundImageOpacity = filament('filament-auth-ui-enhancer')->getEmptyPanelBackgroundImageOpacity();
     $showEmptyPanelOnMobile = filament('filament-auth-ui-enhancer')->getShowEmptyPanelOnMobile();
@@ -9,10 +9,10 @@
     <div
         @class([
           'custom-auth-wrapper flex w-full min-h-screen',
-          'lg:flex-row-reverse' => $formPosition === 'left',
-          'lg:flex-row' => $formPosition === 'right',
-          'flex-col' => $mobileFormPosition === 'bottom' && $showEmptyPanelOnMobile,
-          'flex-col-reverse' => $mobileFormPosition === 'top' && $showEmptyPanelOnMobile,
+          'lg:flex-row-reverse' => $formPanelPosition === 'left',
+          'lg:flex-row' => $formPanelPosition === 'right',
+          'flex-col' => $mobileFormPanelPosition === 'bottom' && $showEmptyPanelOnMobile,
+          'flex-col-reverse' => $mobileFormPanelPosition === 'top' && $showEmptyPanelOnMobile,
         ])
     >
         <!-- Empty Container -->

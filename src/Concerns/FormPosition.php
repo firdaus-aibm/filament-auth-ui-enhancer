@@ -4,21 +4,21 @@ namespace DiogoGPinto\AuthUIEnhancer\Concerns;
 
 trait FormPosition
 {
-    public string $formPosition = 'right';
+    public string $formPanelPosition = 'right';
 
-    public function formPosition(string $position = 'right'): self
+    public function formPanelPosition(string $position = 'right'): self
     {
         if (! in_array($position, ['left', 'right'])) {
             throw new \InvalidArgumentException("Form position must be 'left' or 'right'.");
         }
 
-        $this->formPosition = $position;
+        $this->formPanelPosition = $position;
 
         return $this;
     }
 
-    public function getFormPosition(): string
+    public function getFormPanelPosition(): string
     {
-        return $this->formPosition;
+        return $this->formPanelPosition;
     }
 }
