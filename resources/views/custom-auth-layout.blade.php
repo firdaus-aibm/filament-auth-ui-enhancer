@@ -1,7 +1,7 @@
 @php
     $formPanelPosition = filament('filament-auth-ui-enhancer')->getFormPanelPosition();
     $mobileFormPanelPosition = filament('filament-auth-ui-enhancer')->getMobileFormPanelPosition();
-    $emptyPanelBackgroundImage = filament('filament-auth-ui-enhancer')->getEmptyPanelBackgroundImage();
+    $emptyPanelBackgroundImageUrl = filament('filament-auth-ui-enhancer')->getEmptyPanelBackgroundImage();
     $emptyPanelBackgroundImageOpacity = filament('filament-auth-ui-enhancer')->getEmptyPanelBackgroundImageOpacity();
     $showEmptyPanelOnMobile = filament('filament-auth-ui-enhancer')->getShowEmptyPanelOnMobile();
 @endphp

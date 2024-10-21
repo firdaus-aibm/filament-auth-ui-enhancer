@@ -8,7 +8,7 @@ trait BackgroundAppearance
 
     public ?string $emptyPanelBackgroundColor = null;
 
-    public ?string $emptyPanelBackgroundImage = null;
+    public ?string $emptyPanelBackgroundImageUrl = null;
 
     public ?string $emptyPanelBackgroundImageOpacity = '100%';
 
@@ -36,16 +36,16 @@ trait BackgroundAppearance
         return $this->emptyPanelBackgroundColor ? 'rgb(' . $this->emptyPanelBackgroundColor . ')' : 'rgb(var(--primary-500))';
     }
 
-    public function emptyPanelBackgroundImage(?string $url): self
+    public function emptyPanelBackgroundImageUrl(?string $url): self
     {
-        $this->emptyPanelBackgroundImage = $url;
+        $this->emptyPanelBackgroundImageUrl = $url;
 
         return $this;
     }
 
-    public function getEmptyPanelBackgroundImage(): ?string
+    public function getEmptyPanelBackgroundImageUrl(): ?string
     {
-        return $this->emptyPanelBackgroundImage;
+        return $this->emptyPanelBackgroundImageUrl;
     }
 
     public function emptyPanelBackgroundImageOpacity(?string $opacity): self
