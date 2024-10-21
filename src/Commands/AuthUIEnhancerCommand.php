@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace DiogoGPinto\AuthUIEnhancer\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class AuthUIEnhancerCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-auth-ui-enhancer';
 
     public $description = 'My command';
 
