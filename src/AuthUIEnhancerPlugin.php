@@ -7,8 +7,16 @@ use DiogoGPinto\AuthUIEnhancer\Concerns\FormPanelWidth;
 use DiogoGPinto\AuthUIEnhancer\Concerns\FormPosition;
 use DiogoGPinto\AuthUIEnhancer\Concerns\MobileFormPosition;
 use DiogoGPinto\AuthUIEnhancer\Concerns\ShowEmptyPanelOnMobile;
-use DiogoGPinto\AuthUIEnhancer\Pages\Auth\Login;
+use DiogoGPinto\AuthUIEnhancer\Pages\Auth\AuthUiEnhancerEmailVerificationPrompt;
+use DiogoGPinto\AuthUIEnhancer\Pages\Auth\AuthUiEnhancerLogin;
+use DiogoGPinto\AuthUIEnhancer\Pages\Auth\AuthUiEnhancerRegister;
+use DiogoGPinto\AuthUIEnhancer\Pages\Auth\PasswordReset\AuthUiEnhancerResetPassword;
 use Filament\Contracts\Plugin;
+use Filament\Notifications\Auth\ResetPassword;
+use Filament\Pages\Auth\EmailVerification\EmailVerificationPrompt;
+use Filament\Pages\Auth\Login;
+use Filament\Pages\Auth\PasswordReset\RequestPasswordReset;
+use Filament\Pages\Auth\Register;
 use Filament\Panel;
 use Filament\Support\Facades\FilamentView;
 use Filament\View\PanelsRenderHook;
@@ -28,8 +36,31 @@ class AuthUIEnhancerPlugin implements Plugin
 
     public function register(Panel $panel): void
     {
-        $panel
-            ->login(Login::class);
+        if ($panel->getLoginRouteAction() === Login::class) {
+            $panel
+                ->login(AuthUiEnhancerLogin::class);
+        }
+
+        if ($panel->getRegistrationRouteAction() === Register::class) {
+            $panel
+                ->registration(AuthUiEnhancerRegister::class);
+        }
+
+        if ($panel->getResetPasswordRouteAction() === ResetPassword::class) {
+            $panel
+                ->passwordReset(AuthUiEnhancerResetPassword::class);
+        }
+
+        if ($panel->getRequestPasswordResetRouteAction() === RequestPasswordReset::class) {
+            $panel
+                ->passwordReset(AuthUiEnhancerResetPassword::class);
+
+        }
+
+        if ($panel->getEmailVerificationPromptRouteAction() === EmailVerificationPrompt::class) {
+            $panel
+                ->emailVerification(AuthUiEnhancerEmailVerificationPrompt::class);
+        }
     }
 
     public function boot(Panel $panel): void
