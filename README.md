@@ -66,6 +66,15 @@ AuthUIEnhancerPlugin::make()
     ->loginPanelBackgroundColor('bg-success-500')
 ```
 
+### Mobile Form Panel
+
+By default, the form panel will be displayed on the top of the page on mobile devices.
+
+```php
+AuthUIEnhancerPlugin::make()
+    ->mobileFormPosition('bottom')
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
