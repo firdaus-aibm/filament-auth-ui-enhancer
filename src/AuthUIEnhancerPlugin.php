@@ -7,15 +7,16 @@ use DiogoGPinto\AuthUIEnhancer\Concerns\FormPanelWidth;
 use DiogoGPinto\AuthUIEnhancer\Concerns\FormPosition;
 use DiogoGPinto\AuthUIEnhancer\Concerns\MobileFormPosition;
 use DiogoGPinto\AuthUIEnhancer\Concerns\ShowEmptyPanelOnMobile;
-use DiogoGPinto\AuthUIEnhancer\Pages\Auth\AuthUiEnhancerEmailVerificationPrompt;
+use DiogoGPinto\AuthUIEnhancer\Pages\Auth\EmailVerification\AuthUiEnhancerEmailVerificationPrompt;
 use DiogoGPinto\AuthUIEnhancer\Pages\Auth\AuthUiEnhancerLogin;
 use DiogoGPinto\AuthUIEnhancer\Pages\Auth\AuthUiEnhancerRegister;
+use DiogoGPinto\AuthUIEnhancer\Pages\Auth\PasswordReset\AuthUiEnhancerRequestPasswordReset;
 use DiogoGPinto\AuthUIEnhancer\Pages\Auth\PasswordReset\AuthUiEnhancerResetPassword;
 use Filament\Contracts\Plugin;
-use Filament\Notifications\Auth\ResetPassword;
 use Filament\Pages\Auth\EmailVerification\EmailVerificationPrompt;
 use Filament\Pages\Auth\Login;
 use Filament\Pages\Auth\PasswordReset\RequestPasswordReset;
+use Filament\Pages\Auth\PasswordReset\ResetPassword;
 use Filament\Pages\Auth\Register;
 use Filament\Panel;
 use Filament\Support\Facades\FilamentView;
@@ -46,14 +47,9 @@ class AuthUIEnhancerPlugin implements Plugin
                 ->registration(AuthUiEnhancerRegister::class);
         }
 
-        if ($panel->getResetPasswordRouteAction() === ResetPassword::class) {
+        if ($panel->getRequestPasswordResetRouteAction() === RequestPasswordReset::class && $panel->getEmailVerificationPromptRouteAction() === EmailVerificationPrompt::class) {
             $panel
-                ->passwordReset(AuthUiEnhancerResetPassword::class);
-        }
-
-        if ($panel->getRequestPasswordResetRouteAction() === RequestPasswordReset::class) {
-            $panel
-                ->passwordReset(AuthUiEnhancerResetPassword::class);
+                ->passwordReset(AuthUiEnhancerRequestPasswordReset::class, AuthUiEnhancerResetPassword::class);
 
         }
 
