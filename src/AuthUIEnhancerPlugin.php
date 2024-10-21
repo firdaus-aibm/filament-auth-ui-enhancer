@@ -6,6 +6,7 @@ use DiogoGPinto\AuthUIEnhancer\Concerns\BackgroundAppearance;
 use DiogoGPinto\AuthUIEnhancer\Concerns\FormPanelWidth;
 use DiogoGPinto\AuthUIEnhancer\Concerns\FormPosition;
 use DiogoGPinto\AuthUIEnhancer\Concerns\MobileFormPosition;
+use DiogoGPinto\AuthUIEnhancer\Concerns\ShowEmptyPanelOnMobile;
 use DiogoGPinto\AuthUIEnhancer\Pages\Auth\Login;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
@@ -18,6 +19,7 @@ class AuthUIEnhancerPlugin implements Plugin
     use FormPanelWidth;
     use FormPosition;
     use MobileFormPosition;
+    use ShowEmptyPanelOnMobile;
 
     public function getId(): string
     {
@@ -35,11 +37,15 @@ class AuthUIEnhancerPlugin implements Plugin
         FilamentView::registerRenderHook(
             PanelsRenderHook::HEAD_END,
             function () {
-                return '<style>
-                            :root {
-                                --form-width: ' . $this->getFormPanelWidth() . ';
-                            }
-                        </style>';
+                return '
+                    <style>
+                    :root {
+                    --form-panel-width: ' . $this->getFormPanelWidth() . ';
+                    --form-panel-background-color: ' . $this->getFormPanelBackgroundColor() . ';
+                    --empty-panel-background-color: ' . $this->getEmptyPanelBackgroundColor() . ';
+                    }
+                    </style>
+                ';
             }
         );
     }

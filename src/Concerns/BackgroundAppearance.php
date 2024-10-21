@@ -4,36 +4,36 @@ namespace DiogoGPinto\AuthUIEnhancer\Concerns;
 
 trait BackgroundAppearance
 {
-    public string $loginPanelBackgroundColor = 'bg-transparent';
+    public ?string $formPanelBackgroundColor = null;
 
-    public string $emptyPanelBackgroundColor = 'bg-primary-500';
+    public ?string $emptyPanelBackgroundColor = null;
 
     public ?string $emptyPanelBackgroundImage = null;
 
     public ?string $emptyPanelBackgroundImageOpacity = '100%';
 
-    public function loginPanelBackgroundColor(string $color): self
+    public function formPanelBackgroundColor(string | array $color, int $shade = 500): self
     {
-        $this->loginPanelBackgroundColor = $color;
+        $this->formPanelBackgroundColor = $color[$shade];
 
         return $this;
     }
 
-    public function getLoginPanelBackgroundColor(): string
+    public function getFormPanelBackgroundColor(): ?string
     {
-        return $this->loginPanelBackgroundColor;
+        return $this->formPanelBackgroundColor ? 'rgb(' . $this->formPanelBackgroundColor . ')' : 'transparent';
     }
 
-    public function emptyPanelBackgroundColor(string $color): self
+    public function emptyPanelBackgroundColor(array $color, int $shade = 500): self
     {
-        $this->emptyPanelBackgroundColor = $color;
+        $this->emptyPanelBackgroundColor = $color[$shade];
 
         return $this;
     }
 
-    public function getEmptyPanelBackgroundColor(): string
+    public function getEmptyPanelBackgroundColor(): ?string
     {
-        return $this->emptyPanelBackgroundColor;
+        return $this->emptyPanelBackgroundColor ? 'rgb(' . $this->emptyPanelBackgroundColor . ')' : 'rgb(var(--primary-500))';
     }
 
     public function emptyPanelBackgroundImage(?string $url): self
