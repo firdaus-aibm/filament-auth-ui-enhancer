@@ -2,15 +2,13 @@
 
 namespace DiogoGPinto\AuthUIEnhancer\Facades;
 
+use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \DiogoGPinto\AuthUIEnhancer\AuthUIEnhancer
- */
 class AuthUIEnhancer extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
-        return \DiogoGPinto\AuthUIEnhancer\AuthUIEnhancer::class;
+        return AuthUIEnhancerPlugin::class;
     }
 }
