@@ -70,8 +70,8 @@ class AuthUIEnhancerServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-auth-ui-enhancer-styles', __DIR__ . '/../resources/dist/filament-auth-ui-enhancer.css'),
-            Js::make('filament-auth-ui-enhancer-scripts', __DIR__ . '/../resources/dist/filament-auth-ui-enhancer.js'),
+            //            Css::make('filament-auth-ui-enhancer-styles', __DIR__ . '/../resources/dist/filament-auth-ui-enhancer.css'),
+            //            Js::make('filament-auth-ui-enhancer-scripts', __DIR__ . '/../resources/dist/filament-auth-ui-enhancer.js'),
         ];
     }
 
