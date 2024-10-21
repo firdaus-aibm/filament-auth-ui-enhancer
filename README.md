@@ -30,8 +30,7 @@ use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
 The form panel width has default value of `50%`. You can change it by adding the following method and passing the desired width.
 
 ```php
-AuthUIEnhancerPlugin::make()
-    ->formPanelWidth('60%')
+->formPanelWidth('60%')
 ```
 
 ### Empty Panel
@@ -39,22 +38,19 @@ AuthUIEnhancerPlugin::make()
 You can set the empty panel background color by using the following method.
 
 ```php
-AuthUIEnhancerPlugin::make()
-    ->emptyPanelBackgroundColor('bg-primary-900')
+->emptyPanelBackgroundColor('bg-primary-900')
 ```
 
 You can also set an image to be displayed on the left side of the login form.
 
 ```php
-AuthUIEnhancerPlugin::make()
-    ->emptyPanelBackgroundImage('images/login.png')
+->emptyPanelBackgroundImage('images/login.png')
 ```
 
 If you would like to chance the image opacity.
 
 ```php
-AuthUIEnhancerPlugin::make()
-    ->emptyPanelBackgroundImageOpacity('50%')
+->emptyPanelBackgroundImageOpacity('50%')
 ```
 
 You can change the login form background color by using the following method.
@@ -62,17 +58,21 @@ You can change the login form background color by using the following method.
 ### Login Panel
 
 ```php
-AuthUIEnhancerPlugin::make()
-    ->loginPanelBackgroundColor('bg-success-500')
+->loginPanelBackgroundColor('bg-success-500')
 ```
+
+You can also change the position of the form.
+
+```php
+->formPosition('left')
+````
 
 ### Mobile Form Panel
 
 By default, the form panel will be displayed on the top of the page on mobile devices.
 
 ```php
-AuthUIEnhancerPlugin::make()
-    ->mobileFormPosition('bottom')
+->mobileFormPosition('bottom')
 ```
 
 ## Changelog
