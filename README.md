@@ -56,7 +56,9 @@ content: [
 ```
 
 > [!IMPORTANT]
-> After you've updated your `tailwind.config.js`, don't forget to run `npm run build`.
+> The above content should be placed in your filament theme's `tailwind.config.js` file, under the /resources/css/filament path 
+
+2. Run `npm run build` in your terminal
 
 ## Usage
 
