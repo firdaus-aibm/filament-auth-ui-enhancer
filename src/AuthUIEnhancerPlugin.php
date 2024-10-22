@@ -16,6 +16,7 @@ use Filament\Contracts\Plugin;
 use Filament\Pages\Auth\EmailVerification\EmailVerificationPrompt;
 use Filament\Pages\Auth\Login;
 use Filament\Pages\Auth\PasswordReset\RequestPasswordReset;
+use Filament\Pages\Auth\PasswordReset\ResetPassword;
 use Filament\Pages\Auth\Register;
 use Filament\Panel;
 use Filament\Support\Facades\FilamentView;
@@ -46,7 +47,7 @@ class AuthUIEnhancerPlugin implements Plugin
                 ->registration(AuthUiEnhancerRegister::class);
         }
 
-        if ($panel->getRequestPasswordResetRouteAction() === RequestPasswordReset::class && $panel->getEmailVerificationPromptRouteAction() === EmailVerificationPrompt::class) {
+        if ($panel->getRequestPasswordResetRouteAction() === RequestPasswordReset::class && $panel->getResetPasswordRouteAction() === ResetPassword::class) {
             $panel
                 ->passwordReset(AuthUiEnhancerRequestPasswordReset::class, AuthUiEnhancerResetPassword::class);
 
