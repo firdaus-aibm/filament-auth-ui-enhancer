@@ -17,6 +17,20 @@ Setting it up is a breeze, and it comes packed with a variety of customizable fe
 
 ![Auth UI Enhancer Examples](/art/auth-ui-enhancer-examples.webp)
 
+## Navigation
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [AuthPage Discovery](#auth-page-discovery)
+- [Customizing the Auth UI](#customizing-the-auth-ui)
+    - [Customizing the Form Panel](#customizing-the-form-panel)
+    - [Customizing the Empty Panel](#customizing-the-empty-panel)
+- [Changelog](#changelog)
+- [Contributing](#contributing)
+- [Security Vulnerabilities](#security-vulnerabilities)
+- [Credits](#credits)
+- [License](#license)
+
 ## Installation
 
 First, starting by installing the plugin via composer:
@@ -36,9 +50,9 @@ php artisan filament:assets
 Add the vendor files to your tailwind config file:
 
 ```javascript
-    content: [
-        './vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php',
-    ]
+content: [
+    './vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php',
+]
 ```
 
 ## Usage
@@ -95,6 +109,11 @@ The view for this package divides your screen in two sections:
 
 ### Customizing the Form Panel
 
+You can customize:
+- The [form panel position](#form-position) in both desktop and mobile
+- The [form panel width](#form-panel-width) in desktop
+- The [form panel background color](#form-panel-background-color)
+
 #### Form Position
 
 !['Form Position Examples'](/art/auth-ui-enhancer-left-right-form.webp)
@@ -116,7 +135,6 @@ On mobile devices, you can chose if the form appears above the empty container o
 ```
 
 This method accepts `top` or `bottom` as arguments. You can also hide the empty panel on mobile (see below).
-
 
 #### Form Panel Width
 
@@ -152,35 +170,58 @@ use Filament\Support\Colors\Color;
 ->formPanelBackgroundColor(Color::hex('#f0f0f0'))
 ```
 
-#### 
+### Customizing the Empty Panel
 
+You can customize:
+- The [empty panel background color](#empty-panel-background-color)
+- The [empty panel background image and its opacity](#empty-panel-background-image-and-image-opacity)
 
-### Empty Panel
+#### Empty Panel Background Image and Image Opacity
 
-You can set the empty panel background color by using the following method.
+!['Empty Panel Background Examples'](/art/auth-ui-enhancer-empty-panel-background-image.webp)
+
+You can set an image to be displayed on the empty panel, and control its opacity.
 
 ```php
-->emptyPanelBackgroundColor('bg-primary-900')
+->emptyPanelBackgroundImageUrl('images/login.webp')
 ```
 
-You can also set an image to be displayed on the left side of the login form.
+You can pass an asset url, with Laravel's function `asset('images/login.webp')`.
 
-```php
-->emptyPanelBackgroundImage('images/login.png')
-```
-
-If you would like to chance the image opacity.
+If you would like to chance the image opacity of your image, you can use the following method:
 
 ```php
 ->emptyPanelBackgroundImageOpacity('50%')
 ```
 
-### Mobile Form Panel
+#### Empty Panel Background Color
 
-By default, the form panel will be displayed on the top of the page on mobile devices.
+!['Empty Panel Background Color Examples'](/art/auth-ui-enhancer-empty-panel-background-color.webp)
+
+The default background color is your panel's primary color. You can change the empty panel background color by using the following method:
 
 ```php
-->mobileFormPosition('bottom')
+use Filament\Support\Colors\Color;
+
+->emptyPanelBackgroundColor(Color::Zinc, '300')
+```
+
+In this case, 300 is the shade of the color you want to use.
+
+You can also set the color using HEX or RGB, like in a typical filament panel:
+
+```php
+use Filament\Support\Colors\Color;
+
+->emptyPanelBackgroundColor(Color::hex('#f0f0f0'))
+```
+
+#### Hide Empty Panel on Mobile Devices
+
+You can just use the following method, so the empty panels disappears on mobile and the form container spans to full height:
+
+```php
+->showEmptyPanelOnMobile(false)
 ```
 
 ## Changelog
@@ -198,6 +239,9 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## Credits
 
 - [Diogo Pinto](https://github.com/diogogpinto)
+- [Joao Patrício](https://github.com/ijpatricio) for his amazing support
+- [CodeWithDennis](https://github.com/CodeWithDennis) for his early contributions
+- [Geridoc](https://www.geridoc.pt) for allowing me to release our packages open source
 - [All Contributors](../../contributors)
 
 ## License
