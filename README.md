@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/diogogpinto/filament-auth-ui-enhancer/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/diogogpinto/filament-auth-ui-enhancer/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/diogogpinto/filament-auth-ui-enhancer.svg?style=flat-square)](https://packagist.org/packages/diogogpinto/filament-auth-ui-enhancer)
 
-![Filament Auth UI Enhancer](/art/auth-ui-enhancer.png)
+![Filament Auth UI Enhancer](/art/auth-ui-enhancer.webp)
 
 ## Looking for an easy way to customize the UI of your Auth Pages in your Filament Panel?
 
@@ -15,7 +15,7 @@ Setting it up is a breeze, and it comes packed with a variety of customizable fe
 
 ### Check out some examples you can create right out of the box:
 
-![Auth UI Enhancer Examples](/art/auth-ui-enhancer-examples.png)
+![Auth UI Enhancer Examples](/art/auth-ui-enhancer-examples.webp)
 
 ## Installation
 
