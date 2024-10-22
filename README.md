@@ -39,21 +39,21 @@ First, starting by installing the plugin via composer:
 composer require diogogpinto/filament-auth-ui-enhancer
 ```
 
-After installation, run the following command to publish the assets:
+In an effort to align with Filament's theming methodology you will need to use a custom theme to use this plugin.
 
-```bash
-php artisan filament:assets
-```
+> [!IMPORTANT]
+> If you have not set up a custom theme, follow the instructions in the [Filament Docs](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) first.
 
-### If you're using a custom theme
+1. Add the plugin's views to your `tailwind.config.js` file.
 
-Add the vendor files to your tailwind config file:
-
-```javascript
+```js
 content: [
     './vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php',
 ]
 ```
+
+> [!IMPORTANT]
+> After you've updated your `tailwind.config.js`, don't forget to run `npm run build`.
 
 ## Usage
 
