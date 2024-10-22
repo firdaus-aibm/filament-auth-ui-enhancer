@@ -1,10 +1,12 @@
 {
     "name": "diogogpinto/filament-auth-ui-enhancer",
-    "description": "This is my package filament-auth-ui-enhancer",
+    "description": "This Filament plugin empowers you to transform your auth pages with ease, allowing you to make them truly stand out. It offers a flexible alternative to the default auth pages in the Filament Panels package.",
     "keywords": [
         "diogogpinto",
         "laravel",
-        "filament-auth-ui-enhancer"
+        "filament-auth-ui-enhancer",
+        "filament",
+        "filament-plugin"
     ],
     "homepage": "https://github.com/diogogpinto/filament-auth-ui-enhancer",
     "support": {
@@ -15,7 +17,6 @@
     "authors": [
         {
             "name": "Diogo Pinto",
-            "email": "diogopinto@geridoc.pt",
             "role": "Developer"
         }
     ],
