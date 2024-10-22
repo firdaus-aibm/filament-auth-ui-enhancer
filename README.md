@@ -175,6 +175,7 @@ use Filament\Support\Colors\Color;
 You can customize:
 - The [empty panel background color](#empty-panel-background-color)
 - The [empty panel background image and its opacity](#empty-panel-background-image-and-image-opacity)
+- Either to [show or hide empty panel on mobile](#hide-empty-panel-on-mobile-devices)
 
 #### Empty Panel Background Image and Image Opacity
 
@@ -260,7 +261,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Diogo Pinto](https://github.com/diogogpinto)
+- [Diogo Pinto](https://github.com/diogogpinto) - you can follow me on [Twitter](https://x.com/diogogpinto)
 - [Joao Patrício](https://github.com/ijpatricio) for his amazing support
 - [CodeWithDennis](https://github.com/CodeWithDennis) for his early contributions
 - [Geridoc](https://www.geridoc.pt) for allowing me to release our packages with Open Source licenses
