@@ -224,6 +224,28 @@ You can just use the following method, so the empty panels disappears on mobile 
 ->showEmptyPanelOnMobile(false)
 ```
 
+## Working Example
+
+If you're just looking to plug and play some code into your Filament Panel, here's a working code so you can just insert into your plugins array:
+
+```php
+use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
+$panel
+    ->plugins([
+        AuthUIEnhancerPlugin::make()
+            ->showEmptyPanelOnMobile(false)
+            ->formPanelPosition('right')
+            ->formPanelWidth('40%')
+            ->emptyPanelBackgroundImageOpacity('70%')
+            ->emptyPanelBackgroundImageUrl('https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
+    ]);
+
+```
+
+> [!WARNING]  
+> This is a random image URL I got from Pexels. If you want to use it in production or commercially you should check its license.
+
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
@@ -241,7 +263,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 - [Diogo Pinto](https://github.com/diogogpinto)
 - [Joao Patrício](https://github.com/ijpatricio) for his amazing support
 - [CodeWithDennis](https://github.com/CodeWithDennis) for his early contributions
-- [Geridoc](https://www.geridoc.pt) for allowing me to release our packages open source
+- [Geridoc](https://www.geridoc.pt) for allowing me to release our packages with Open Source licenses
 - [All Contributors](../../contributors)
 
 ## License
