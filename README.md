@@ -47,7 +47,7 @@ In an effort to align with Filament's theming methodology you will need to use a
 > [!IMPORTANT]
 > If you have not set up a custom theme, follow the instructions in the [Filament Docs](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) first.
 
-1. Add the plugin's views to your `tailwind.config.js` file.
+1. Add the plugin's views to your `tailwind.config.js` file. (path: /resource/css/filament/admin)
 
 ```js
 content: [
