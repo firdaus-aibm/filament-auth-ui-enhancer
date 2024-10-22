@@ -35,10 +35,10 @@ php artisan filament:assets
 
 Add the vendor files to your tailwind config file:
 
-```bash
+```javascript
     content: [
         './vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php',
-    ],
+    ]
 ```
 
 ## Usage
@@ -97,6 +97,8 @@ The view for this package divides your screen in two sections:
 
 #### Form Position
 
+!['Form Position Examples'](/art/auth-ui-enhancer-left-right-form.webp)
+
 You can make the form appear on the left side of the page or in the right side of the page.
 
 ```php
@@ -104,6 +106,8 @@ You can make the form appear on the left side of the page or in the right side o
 ````
 
 #### Form Position on Mobile
+
+!['Mobile Form Position Examples'](/art/auth-ui-enhancer-top-bottom-mobile.webp)
 
 On mobile devices, you can chose if the form appears above the empty container or below.
 
@@ -116,6 +120,8 @@ This method accepts `top` or `bottom` as arguments. You can also hide the empty 
 
 #### Form Panel Width
 
+!['Form Width Examples'](/art/auth-ui-enhancer-form-width.webp)
+
 The form panel width has a default value of `50%`. You can change it by adding the following method and passing the desired width.
 
 ```php
@@ -124,7 +130,9 @@ The form panel width has a default value of `50%`. You can change it by adding t
 
 Sizes must be expressed in rem, %, px, em, vw, vh or pt. 
 
-#### Form Panel background color
+#### Form Panel Background Color
+
+!['Form Background Color Examples'](/art/auth-ui-enhancer-form-background.webp)
 
 You can change the form panel background color by using the following method:
 
