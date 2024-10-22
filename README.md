@@ -25,6 +25,9 @@ Setting it up is a breeze, and it comes packed with a variety of customizable fe
 - [Customizing the Auth UI](#customizing-the-auth-ui)
     - [Customizing the Form Panel](#customizing-the-form-panel)
     - [Customizing the Empty Panel](#customizing-the-empty-panel)
+- [Further Customization - CSS](#further-customization---css)
+- [Working Examples](#working-example)
+- [Todo](#todo)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
 - [Security Vulnerabilities](#security-vulnerabilities)
@@ -225,6 +228,24 @@ You can just use the following method, so the empty panels disappears on mobile 
 ->showEmptyPanelOnMobile(false)
 ```
 
+## Further Customization - CSS
+
+You can create further customizations in your theme's CSS file. The following classes are avaliable:
+
+```css
+/* Whole page wrapper */
+.custom-auth-wrapper {}
+
+/* Empty panel wrapper */
+.custom-auth-empty-panel {}
+
+/* Form panel wrapper */
+.custom-auth-form-panel {}
+
+/* Form wrapper */
+.custom-auth-form-wrapper {}
+```
+
 ## Working Example
 
 If you're just looking to plug and play some code into your Filament Panel, here's a working code so you can just insert into your plugins array:
@@ -246,6 +267,10 @@ $panel
 > [!WARNING]  
 > This is a random image URL I got from Pexels. If you want to use it in production or commercially you should check its license.
 
+## Todo
+
+- Render custom views on empty panel
+- Develop different layouts
 
 ## Changelog
 
