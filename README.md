@@ -286,7 +286,6 @@ $panel
 
 ## Todo
 
-- Render custom views on empty panel
 - Develop different layouts
 
 ## Changelog
