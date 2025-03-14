@@ -234,6 +234,7 @@ use Filament\Support\Colors\Color;
 ```
 
 The method only accepts the view name as a parameter.
+If both, background image and custom view are give, the plugin will prioritize the view.
 
 
 
