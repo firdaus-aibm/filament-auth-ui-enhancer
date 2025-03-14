@@ -180,6 +180,7 @@ use Filament\Support\Colors\Color;
 You can customize:
 - The [empty panel background color](#empty-panel-background-color)
 - The [empty panel background image and its opacity](#empty-panel-background-image-and-image-opacity)
+- The [empty panel view](#empty-panel-custom-view)
 - Either to [show or hide empty panel on mobile](#hide-empty-panel-on-mobile-devices)
 
 #### Empty Panel Background Image and Image Opacity
@@ -221,6 +222,20 @@ use Filament\Support\Colors\Color;
 
 ->emptyPanelBackgroundColor(Color::hex('#f0f0f0'))
 ```
+
+#### Empty Panel Custom View
+
+You can decide to use a custom view inside the empty panel instead of a background. Decide which view to use by using the following method:
+
+```php
+use Filament\Support\Colors\Color;
+
+->emptyPanelView('view')
+```
+
+The method only accepts the view name as a parameter.
+
+
 
 #### Hide Empty Panel on Mobile Devices
 
