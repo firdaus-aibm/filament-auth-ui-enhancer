@@ -4,7 +4,7 @@
     $emptyPanelBackgroundImageUrl = filament('filament-auth-ui-enhancer')->getEmptyPanelBackgroundImageUrl();
     $emptyPanelBackgroundImageOpacity = filament('filament-auth-ui-enhancer')->getEmptyPanelBackgroundImageOpacity();
     $showEmptyPanelOnMobile = filament('filament-auth-ui-enhancer')->getShowEmptyPanelOnMobile();
-    $customEmptyPanelView = filament('filament-auth-ui-enhancer')->getCustomEmptyPanelView();
+    $emptyPanelView = filament('filament-auth-ui-enhancer')->getEmptyPanelView();
 @endphp
 <x-filament-panels::layout.base :livewire="$livewire">
     <div
@@ -24,8 +24,8 @@
             'flex flex-col flex-grow' => $showEmptyPanelOnMobile === true
             ])
         >
-            @if($customEmptyPanelView)
-                @include($customEmptyPanelView)
+            @if($emptyPanelView)
+                @include($emptyPanelView)
             @else
                 @if($emptyPanelBackgroundImageUrl)
                     <div class="absolute inset-0 h-full w-full bg-cover bg-center"

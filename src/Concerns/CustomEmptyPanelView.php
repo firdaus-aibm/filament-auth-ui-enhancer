@@ -4,17 +4,17 @@ namespace DiogoGPinto\AuthUIEnhancer\Concerns;
 
 trait CustomEmptyPanelView
 {
-    public ?string $customEmptyPanelView = null;
+    public ?string $emptyPanelView = null;
 
-    public function customEmptyPanelView(string $view): self
+    public function emptyPanelView(string $view): self
     {
-        $this->customEmptyPanelView = $view;
+        $this->emptyPanelView = $view;
 
         return $this;
     }
 
-    public function getCustomEmptyPanelView(): ?string
+    public function getEmptyPanelView(): ?string
     {
-        return $this->customEmptyPanelView;
+        return $this->emptyPanelView;
     }
 }
