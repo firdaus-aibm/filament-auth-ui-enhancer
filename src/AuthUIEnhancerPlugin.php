@@ -3,11 +3,11 @@
 namespace DiogoGPinto\AuthUIEnhancer;
 
 use DiogoGPinto\AuthUIEnhancer\Concerns\BackgroundAppearance;
+use DiogoGPinto\AuthUIEnhancer\Concerns\CustomEmptyPanelView;
 use DiogoGPinto\AuthUIEnhancer\Concerns\FormPanelWidth;
 use DiogoGPinto\AuthUIEnhancer\Concerns\FormPosition;
 use DiogoGPinto\AuthUIEnhancer\Concerns\MobileFormPosition;
 use DiogoGPinto\AuthUIEnhancer\Concerns\ShowEmptyPanelOnMobile;
-use DiogoGPinto\AuthUIEnhancer\Concerns\CustomEmptyPanelView;
 use DiogoGPinto\AuthUIEnhancer\Pages\Auth\AuthUiEnhancerLogin;
 use DiogoGPinto\AuthUIEnhancer\Pages\Auth\AuthUiEnhancerRegister;
 use DiogoGPinto\AuthUIEnhancer\Pages\Auth\EmailVerification\AuthUiEnhancerEmailVerificationPrompt;
@@ -26,11 +26,11 @@ use Filament\View\PanelsRenderHook;
 class AuthUIEnhancerPlugin implements Plugin
 {
     use BackgroundAppearance;
+    use CustomEmptyPanelView;
     use FormPanelWidth;
     use FormPosition;
     use MobileFormPosition;
     use ShowEmptyPanelOnMobile;
-    use CustomEmptyPanelView;
 
     public function getId(): string
     {
