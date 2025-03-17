@@ -19,20 +19,20 @@ Setting it up is a breeze, and it comes packed with a variety of customizable fe
 
 ## Navigation
 
-- [Installation](#installation)
-- [Usage](#usage)
-  - [AuthPage Discovery](#auth-page-discovery)
-- [Customizing the Auth UI](#customizing-the-auth-ui)
-    - [Customizing the Form Panel](#customizing-the-form-panel)
-    - [Customizing the Empty Panel](#customizing-the-empty-panel)
-- [Further Customization - CSS](#further-customization---css)
-- [Working Examples](#working-example)
-- [Todo](#todo)
-- [Changelog](#changelog)
-- [Contributing](#contributing)
-- [Security Vulnerabilities](#security-vulnerabilities)
-- [Credits](#credits)
-- [License](#license)
+-   [Installation](#installation)
+-   [Usage](#usage)
+    -   [AuthPage Discovery](#auth-page-discovery)
+-   [Customizing the Auth UI](#customizing-the-auth-ui)
+    -   [Customizing the Form Panel](#customizing-the-form-panel)
+    -   [Customizing the Empty Panel](#customizing-the-empty-panel)
+-   [Further Customization - CSS](#further-customization---css)
+-   [Working Examples](#working-example)
+-   [Todo](#todo)
+-   [Changelog](#changelog)
+-   [Contributing](#contributing)
+-   [Security Vulnerabilities](#security-vulnerabilities)
+-   [Credits](#credits)
+-   [License](#license)
 
 ## Installation
 
@@ -56,7 +56,7 @@ content: [
 ```
 
 > [!IMPORTANT]
-> The above content should be placed in your filament theme's `tailwind.config.js` file, under the /resources/css/filament path 
+> The above content should be placed in your filament theme's `tailwind.config.js` file, under the /resources/css/filament path
 
 2. Run `npm run build` in your terminal
 
@@ -109,15 +109,17 @@ class YourLoginClass extends BaseLogin
 ## Customizing the Auth UI
 
 The view for this package divides your screen in two sections:
-- Form Panel - The panel that contains the form
-- Empty Panel - The panel that contains the image
+
+-   Form Panel - The panel that contains the form
+-   Empty Panel - The panel that contains the image
 
 ### Customizing the Form Panel
 
 You can customize:
-- The [form panel position](#form-position) in both desktop and mobile
-- The [form panel width](#form-panel-width) in desktop
-- The [form panel background color](#form-panel-background-color)
+
+-   The [form panel position](#form-position) in both desktop and mobile
+-   The [form panel width](#form-panel-width) in desktop
+-   The [form panel background color](#form-panel-background-color)
 
 #### Form Position
 
@@ -127,7 +129,7 @@ You can make the form appear on the left side of the page or in the right side o
 
 ```php
 ->formPanelPosition('left')
-````
+```
 
 #### Form Position on Mobile
 
@@ -151,7 +153,7 @@ The form panel width has a default value of `50%`. You can change it by adding t
 ->formPanelWidth('40%')
 ```
 
-Sizes must be expressed in rem, %, px, em, vw, vh or pt. 
+Sizes must be expressed in rem, %, px, em, vw, vh or pt.
 
 #### Form Panel Background Color
 
@@ -178,10 +180,11 @@ use Filament\Support\Colors\Color;
 ### Customizing the Empty Panel
 
 You can customize:
-- The [empty panel background color](#empty-panel-background-color)
-- The [empty panel background image and its opacity](#empty-panel-background-image-and-image-opacity)
-- The [empty panel view](#empty-panel-custom-view)
-- Either to [show or hide empty panel on mobile](#hide-empty-panel-on-mobile-devices)
+
+-   The [empty panel background color](#empty-panel-background-color)
+-   The [empty panel background image and its opacity](#empty-panel-background-image-and-image-opacity)
+-   The [empty panel view](#empty-panel-custom-view)
+-   Either to [show or hide empty panel on mobile](#hide-empty-panel-on-mobile-devices)
 
 #### Empty Panel Background Image and Image Opacity
 
@@ -225,18 +228,16 @@ use Filament\Support\Colors\Color;
 
 #### Empty Panel Custom View
 
+!['Empty Panel View Examples'](/art/auth-ui-enhancer-empty-view.webp)
+
 You can decide to use a custom view inside the empty panel instead of a background. Decide which view to use by using the following method:
 
 ```php
-use Filament\Support\Colors\Color;
-
 ->emptyPanelView('view')
 ```
 
 The method only accepts the view name as a parameter.
 If both, background image and custom view are give, the plugin will prioritize the view.
-
-
 
 #### Hide Empty Panel on Mobile Devices
 
@@ -252,16 +253,20 @@ You can create further customizations in your theme's CSS file. The following cl
 
 ```css
 /* Whole page wrapper */
-.custom-auth-wrapper {}
+.custom-auth-wrapper {
+}
 
 /* Empty panel wrapper */
-.custom-auth-empty-panel {}
+.custom-auth-empty-panel {
+}
 
 /* Form panel wrapper */
-.custom-auth-form-panel {}
+.custom-auth-form-panel {
+}
 
 /* Form wrapper */
-.custom-auth-form-wrapper {}
+.custom-auth-form-wrapper {
+}
 ```
 
 ## Working Example
@@ -287,7 +292,7 @@ $panel
 
 ## Todo
 
-- Develop different layouts
+-   Develop different layouts
 
 ## Changelog
 
@@ -303,11 +308,11 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Diogo Pinto](https://github.com/diogogpinto) - you can follow me on [Twitter](https://x.com/diogogpinto)
-- [Joao Patrício](https://github.com/ijpatricio) for his amazing support
-- [CodeWithDennis](https://github.com/CodeWithDennis) for his early contributions
-- [Geridoc](https://www.geridoc.pt) for allowing me to release our packages with Open Source licenses
-- [All Contributors](../../contributors)
+-   [Diogo Pinto](https://github.com/diogogpinto) - you can follow me on [Twitter](https://x.com/diogogpinto)
+-   [Joao Patrício](https://github.com/ijpatricio) for his amazing support
+-   [CodeWithDennis](https://github.com/CodeWithDennis) for his early contributions
+-   [Geridoc](https://www.geridoc.pt) for allowing me to release our packages with Open Source licenses
+-   [All Contributors](../../contributors)
 
 ## License
 
