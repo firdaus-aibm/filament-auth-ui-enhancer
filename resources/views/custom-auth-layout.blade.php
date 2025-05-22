@@ -43,4 +43,8 @@
         </div>
 
     </div>
+    <!-- Footer starts here -->
+    <footer class="w-full text-center py-4 bg-gray-100 text-gray-600">
+        © {{ date('Y') }} Your Company Name. All rights reserved.
+    </footer>
 </x-filament-panels::layout.base>
