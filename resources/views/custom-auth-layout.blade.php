@@ -81,10 +81,10 @@
 			<!-- Desktop Menu -->
 			<ul class="hidden items-center gap-4 md:flex">
 				<li>
-					<a href="#" @click.prevent="contactModalOpen = true; $nextTick(() => { if($refs.modalCloseButton) $refs.modalCloseButton.focus() })"
-					   class="text-black hover:text-[#a5308a] dark:text-blue-300 dark:hover:text-blue-300 font-medium transition-colors">
+					<button @click.prevent="contactModalOpen = true; $nextTick(() => { if($refs.modalCloseButton) $refs.modalCloseButton.focus() })"
+					        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-[#3c4d8b] text-[#3c4d8b] hover:border-[#a5308a] hover:text-[#a5308a] focus:outline-hidden focus:border-[#a5308a] focus:text-[#a5308a] disabled:opacity-50 disabled:pointer-events-none">
 						Contact Us
-					</a>
+					</button>
 				</li>
 			</ul>
 
