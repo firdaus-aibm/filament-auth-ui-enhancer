@@ -233,7 +233,7 @@
 		</nav>
 		<div
 				@class([
-				  'custom-auth-wrapper flex w-full',
+				  'custom-auth-wrapper flex w-full flex-grow',
 				  'lg:flex-row-reverse' => $formPanelPosition === 'left',
 				  'lg:flex-row' => $formPanelPosition === 'right',
 				  'flex-col' => $mobileFormPanelPosition === 'bottom' && $showEmptyPanelOnMobile,
@@ -274,7 +274,7 @@
 		</div>
 		<!-- Footer starts here -->
 		<!-- ========== FOOTER ========== -->
-		<footer class="bg-[#a5308a] w-full dark:bg-neutral-950 fixed bottom-0 left-0 right-0">
+		<footer class="bg-[#a5308a] w-full dark:bg-neutral-950">
 			<div class="w-full py-6 px-4 mx-auto">
 				<div class="grid md:grid-cols-2 gap-8">
 					<div class="col-span-1">
