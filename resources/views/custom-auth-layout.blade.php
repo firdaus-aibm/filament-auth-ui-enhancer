@@ -7,7 +7,7 @@
 	$emptyPanelView = filament('filament-auth-ui-enhancer')->getEmptyPanelView();
 @endphp
 <x-filament-panels::layout.base :livewire="$livewire">
-	<div style="height: 100vh" class="bg-white dark:bg-neutral-900">
+	<div style="height: 100vh" class="bg-white dark:bg-neutral-900 flex flex-col min-h-screen">
 		<nav x-data="{ mobileMenuIsOpen: false, contactModalOpen: false }" x-on:click.away="mobileMenuIsOpen = false" class="flex items-center justify-between bg-white border-b border-neutral-200 py-4 px-4 dark:bg-neutral-900">
 			<!-- Brand Logo -->
 			<a href="#" class="text-2xl font-bold text-neutral-900 dark:text-white">
