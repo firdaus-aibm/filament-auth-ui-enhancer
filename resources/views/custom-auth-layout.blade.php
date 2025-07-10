@@ -81,13 +81,17 @@
 			<!-- Desktop Menu -->
 			<ul class="hidden items-center gap-4 md:flex">
 				<li>
+					<a href="/register"
+					   class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-green-600 bg-green-600 text-white hover:bg-green-700 hover:border-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition">
+						Join Us
+					</a>
 					<button @click.prevent="contactModalOpen = true; $nextTick(() => { if($refs.modalCloseButton) $refs.modalCloseButton.focus() })"
 					        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-[#3c4d8b] text-[#3c4d8b] hover:border-[#a5308a] hover:text-[#a5308a] focus:outline-hidden focus:border-[#a5308a] focus:text-[#a5308a] disabled:opacity-50 disabled:pointer-events-none">
 						Contact Us
 					</button>
 				</li>
 			</ul>
-
+			
 			<!-- Mobile Menu Button -->
 			<button x-on:click="mobileMenuIsOpen = !mobileMenuIsOpen"
 			        x-bind:aria-expanded="mobileMenuIsOpen"
@@ -103,7 +107,7 @@
 					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
 				</svg>
 			</button>
-
+			
 			<!-- Mobile Menu -->
 			<ul x-cloak
 			    x-show="mobileMenuIsOpen"
@@ -115,13 +119,17 @@
 			    x-transition:leave-end="-translate-y-full"
 			    id="mobileMenu"
 			    class="fixed max-h-svh overflow-y-auto inset-x-0 top-0 z-10 flex flex-col divide-y divide-neutral-300 rounded-b-sm border-b border-neutral-300 bg-neutral-50 px-6 pb-6 pt-20 dark:divide-neutral-700 dark:border-neutral-700 dark:bg-neutral-900 md:hidden">
+				<a href="/register"
+				   class="w-full text-lg font-semibold text-neutral-600 focus:underline dark:text-neutral-300 py-2">
+					Join Us
+				</a>
 				<a href="#"
 				   @click.prevent="contactModalOpen = true; mobileMenuIsOpen = false; $nextTick(() => { if($refs.modalCloseButton) $refs.modalCloseButton.focus() })"
 				   class="w-full text-lg font-semibold text-neutral-600 focus:underline dark:text-neutral-300 py-2">
 					Contact Us
 				</a>
 			</ul>
-
+			
 			<!-- Single Shared Contact Modal -->
 			<div x-show="contactModalOpen"
 			     @keydown.escape.window="contactModalOpen = false"
@@ -142,7 +150,7 @@
 								</svg>
 							</button>
 						</div>
-
+						
 						<div class="grid md:grid-cols-2 gap-8">
 							<!-- First POC -->
 							<div class="bg-white rounded-xl p-8 border-2 border-gray-100 hover:shadow-lg transition-all duration-300">
@@ -153,11 +161,11 @@
 											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
 										</svg>
 									</div>
-
+									
 									<!-- POC Details -->
 									<h3 class="text-2xl font-bold text-gray-800 mb-6">Boe Wong</h3>
 									{{--<p class="text-gray-500 mb-6">Sales Manager</p>--}}
-
+									
 									<!-- Contact Information -->
 									<div class="space-y-4 w-full">
 										<div class="flex items-center justify-center space-x-3">
@@ -185,7 +193,7 @@
 									</div>
 								</div>
 							</div>
-
+							
 							<!-- Second POC -->
 							<div class="bg-white rounded-xl p-8 border-2 border-gray-100 hover:shadow-lg transition-all duration-300">
 								<div class="flex flex-col items-center text-center">
@@ -195,11 +203,11 @@
 											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
 										</svg>
 									</div>
-
+									
 									<!-- POC Details -->
 									<h3 class="text-2xl font-bold text-gray-800 mb-6">Shelly Tan</h3>
 									{{--<p class="text-gray-500 mb-6">Customer Support</p>--}}
-
+									
 									<!-- Contact Information -->
 									<div class="space-y-4 w-full">
 										<div class="flex items-center justify-center space-x-3">
@@ -258,11 +266,11 @@
 					@endif
 				@endif
 			</div>
-
+			
 			<!-- Form Container -->
 			<div class="custom-auth-form-panel flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-36 w-full lg:w-[var(--form-panel-width)] bg-[var(--form-panel-background-color)]">
 				<div class="mb-16 flex items-center justify-center">
-              <span class="font-extrabold text-[#a5308a] text-2xl md:text-3xl md:text-4xl">
+              <span class="font-extrabold text-[#a5308a] text-3xl md:text-4xl">
                 {{config('app.name')}}
               </span>
 				</div>
@@ -270,7 +278,7 @@
 					{{ $slot }}
 				</div>
 			</div>
-
+		
 		</div>
 		<!-- Footer starts here -->
 		<!-- ========== FOOTER ========== -->
@@ -303,8 +311,8 @@
 						</div>
 						<!-- End Social Brands -->
 					</div>
-
-
+					
+					
 					<div class="flex flex-col col-span-1 w-3/4 md:ml-auto">
 						<h4 class="font-base text-gray-100">Managed and Distributed by:</h4>
 						<div class="mt-3 grid space-y-3 mb-4">
