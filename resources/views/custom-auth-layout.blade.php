@@ -81,10 +81,10 @@
 			<!-- Desktop Menu -->
 			<ul class="hidden items-center gap-4 md:flex">
 				<li>
-					<a href="/register"
+<!-- 					<a href="/register"
 					   class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-green-600 bg-green-600 text-white hover:bg-green-700 hover:border-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition">
 						Join Us
-					</a>
+					</a> -->
 					<button @click.prevent="contactModalOpen = true; $nextTick(() => { if($refs.modalCloseButton) $refs.modalCloseButton.focus() })"
 					        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-[#3c4d8b] text-[#3c4d8b] hover:border-[#a5308a] hover:text-[#a5308a] focus:outline-hidden focus:border-[#a5308a] focus:text-[#a5308a] disabled:opacity-50 disabled:pointer-events-none">
 						Contact Us
